@@ -1,0 +1,714 @@
+{
+  "name": "SPPT_Dataset",
+  "version": "1.0",
+  "scope": "Frozen balanced positive-sequence AC inputs plus deterministic rich-model DC augmentation",
+  "hybrid_export_status": "New SPPT-format data exports of the saved baseline; not inputs to the original LLM trial",
+  "upstream_repository": "https://github.com/GRIDAPPSD/Powergrid-Models",
+  "upstream_commit": "eaa0c3dcbc607e01c3f98092e3dea18929ae4d60",
+  "new_API_calls": 0,
+  "new_power_flow_runs": 0,
+  "cases": {
+    "ieee123_glm": {
+      "representation": "GLM",
+      "native_file": "positive_sequence.glm",
+      "hybrid_file": "hybrid_sppt.glm",
+      "native_sha256": "3041f5ea2c5920426e9006b599ae14cc6516ff9132c21a6dc61daf10fb001f44",
+      "snapshot_sha256": "a5dbe3230b625766b683f9607c3aabded8744de45be12a458b55ed61de9c1cc3",
+      "rich_sha256": "bb3da97662cddbd7f7b627ceed91e4cd6c7fc3e1426a1143347022394ec30c79",
+      "rich_AC_nodes": 1505,
+      "counts": {
+        "AC_bus": 1499,
+        "AC_branch": 1498,
+        "DC_bus": 2,
+        "DC_branch": 1,
+        "VSC": 2
+      },
+      "total_active_load_mw": 3.84,
+      "source_AC_node": "node_150",
+      "largest_load_AC_node": "house_agg_0_A_10_node_11_102",
+      "dc_voltage_base_kv": 10.0,
+      "base_mva": 1.0,
+      "r_dc_pu": 0.02,
+      "r_dc_ohm": 2.0,
+      "efficiency": 0.99,
+      "Vdc_ref_pu": 1.02,
+      "P_PQ_mw": 0.05,
+      "expected_overlay_records": [
+        [
+          "dc_node",
+          {
+            "id": "DC:SPPT_DC_BUS_1",
+            "domain": "DC",
+            "vn_kv": 10.0
+          }
+        ],
+        [
+          "dc_node",
+          {
+            "id": "DC:SPPT_DC_BUS_2",
+            "domain": "DC",
+            "vn_kv": 10.0
+          }
+        ],
+        [
+          "dc_line",
+          {
+            "id": "dc_line:SPPT_DC_LINE",
+            "kind": "dc_line",
+            "engineering_id": "SPPT_DC_LINE",
+            "param_r_pu": 0.02,
+            "param_r_ohm": 2.0,
+            "param_base_mva": 1.0,
+            "param_base_kv": 10.0,
+            "param_in_service": true
+          }
+        ],
+        [
+          "terminal",
+          {
+            "id": "dc_line:SPPT_DC_LINE:terminal:1",
+            "owner": "dc_line:SPPT_DC_LINE",
+            "node": "DC:SPPT_DC_BUS_1",
+            "domain": "DC"
+          }
+        ],
+        [
+          "terminal",
+          {
+            "id": "dc_line:SPPT_DC_LINE:terminal:2",
+            "owner": "dc_line:SPPT_DC_LINE",
+            "node": "DC:SPPT_DC_BUS_2",
+            "domain": "DC"
+          }
+        ],
+        [
+          "vsc",
+          {
+            "id": "vsc:SPPT_VSC_1",
+            "kind": "vsc",
+            "engineering_id": "SPPT_VSC_1",
+            "param_eta": 0.99,
+            "param_in_service": true,
+            "param_base_mva": 1.0,
+            "ctrl_mode": "VDC_Q",
+            "ctrl_vdc_pu": 1.02,
+            "ctrl_q_ac_mvar": 0.0
+          }
+        ],
+        [
+          "terminal",
+          {
+            "id": "vsc:SPPT_VSC_1:terminal:1",
+            "owner": "vsc:SPPT_VSC_1",
+            "node": "node_150",
+            "domain": "AC"
+          }
+        ],
+        [
+          "terminal",
+          {
+            "id": "vsc:SPPT_VSC_1:terminal:2",
+            "owner": "vsc:SPPT_VSC_1",
+            "node": "DC:SPPT_DC_BUS_1",
+            "domain": "DC"
+          }
+        ],
+        [
+          "vsc",
+          {
+            "id": "vsc:SPPT_VSC_2",
+            "kind": "vsc",
+            "engineering_id": "SPPT_VSC_2",
+            "param_eta": 0.99,
+            "param_in_service": true,
+            "param_base_mva": 1.0,
+            "ctrl_mode": "PQ",
+            "ctrl_p_ac_injection_mw": 0.05,
+            "ctrl_q_ac_mvar": 0.0
+          }
+        ],
+        [
+          "terminal",
+          {
+            "id": "vsc:SPPT_VSC_2:terminal:1",
+            "owner": "vsc:SPPT_VSC_2",
+            "node": "house_agg_0_A_10_node_11_102",
+            "domain": "AC"
+          }
+        ],
+        [
+          "terminal",
+          {
+            "id": "vsc:SPPT_VSC_2:terminal:2",
+            "owner": "vsc:SPPT_VSC_2",
+            "node": "DC:SPPT_DC_BUS_2",
+            "domain": "DC"
+          }
+        ]
+      ],
+      "normalization_provenance_sha256": "8f0c15add7264787fe0ffba3ae94fd64e15f5c11d6b52ff9c3463414a4e1dc16"
+    },
+    "ieee8500_glm": {
+      "representation": "GLM",
+      "native_file": "positive_sequence.glm",
+      "hybrid_file": "hybrid_sppt.glm",
+      "native_sha256": "4f44f2c53c0d23f37ef8cb80ca39eb44d6b20f0fffa9a1b8514141e4f8119b07",
+      "snapshot_sha256": "706ea023b2f43c51dffbf39ae1115c23288bdbd537b961099d2da754897da801",
+      "rich_sha256": "da9d5d1dcb81511f4376a0f48de97f2350999ced98e37eb4b222fe394ca1f621",
+      "rich_AC_nodes": 4875,
+      "counts": {
+        "AC_bus": 4837,
+        "AC_branch": 4836,
+        "DC_bus": 2,
+        "DC_branch": 1,
+        "VSC": 2
+      },
+      "total_active_load_mw": 10.773169999999999,
+      "source_AC_node": "HVMV_Sub_HSB",
+      "largest_load_AC_node": "SX3234149C",
+      "dc_voltage_base_kv": 10.0,
+      "base_mva": 1.0,
+      "r_dc_pu": 0.02,
+      "r_dc_ohm": 2.0,
+      "efficiency": 0.99,
+      "Vdc_ref_pu": 1.02,
+      "P_PQ_mw": 0.05,
+      "expected_overlay_records": [
+        [
+          "dc_node",
+          {
+            "id": "DC:SPPT_DC_BUS_1",
+            "domain": "DC",
+            "vn_kv": 10.0
+          }
+        ],
+        [
+          "dc_node",
+          {
+            "id": "DC:SPPT_DC_BUS_2",
+            "domain": "DC",
+            "vn_kv": 10.0
+          }
+        ],
+        [
+          "dc_line",
+          {
+            "id": "dc_line:SPPT_DC_LINE",
+            "kind": "dc_line",
+            "engineering_id": "SPPT_DC_LINE",
+            "param_r_pu": 0.02,
+            "param_r_ohm": 2.0,
+            "param_base_mva": 1.0,
+            "param_base_kv": 10.0,
+            "param_in_service": true
+          }
+        ],
+        [
+          "terminal",
+          {
+            "id": "dc_line:SPPT_DC_LINE:terminal:1",
+            "owner": "dc_line:SPPT_DC_LINE",
+            "node": "DC:SPPT_DC_BUS_1",
+            "domain": "DC"
+          }
+        ],
+        [
+          "terminal",
+          {
+            "id": "dc_line:SPPT_DC_LINE:terminal:2",
+            "owner": "dc_line:SPPT_DC_LINE",
+            "node": "DC:SPPT_DC_BUS_2",
+            "domain": "DC"
+          }
+        ],
+        [
+          "vsc",
+          {
+            "id": "vsc:SPPT_VSC_1",
+            "kind": "vsc",
+            "engineering_id": "SPPT_VSC_1",
+            "param_eta": 0.99,
+            "param_in_service": true,
+            "param_base_mva": 1.0,
+            "ctrl_mode": "VDC_Q",
+            "ctrl_vdc_pu": 1.02,
+            "ctrl_q_ac_mvar": 0.0
+          }
+        ],
+        [
+          "terminal",
+          {
+            "id": "vsc:SPPT_VSC_1:terminal:1",
+            "owner": "vsc:SPPT_VSC_1",
+            "node": "HVMV_Sub_HSB",
+            "domain": "AC"
+          }
+        ],
+        [
+          "terminal",
+          {
+            "id": "vsc:SPPT_VSC_1:terminal:2",
+            "owner": "vsc:SPPT_VSC_1",
+            "node": "DC:SPPT_DC_BUS_1",
+            "domain": "DC"
+          }
+        ],
+        [
+          "vsc",
+          {
+            "id": "vsc:SPPT_VSC_2",
+            "kind": "vsc",
+            "engineering_id": "SPPT_VSC_2",
+            "param_eta": 0.99,
+            "param_in_service": true,
+            "param_base_mva": 1.0,
+            "ctrl_mode": "PQ",
+            "ctrl_p_ac_injection_mw": 0.05,
+            "ctrl_q_ac_mvar": 0.0
+          }
+        ],
+        [
+          "terminal",
+          {
+            "id": "vsc:SPPT_VSC_2:terminal:1",
+            "owner": "vsc:SPPT_VSC_2",
+            "node": "SX3234149C",
+            "domain": "AC"
+          }
+        ],
+        [
+          "terminal",
+          {
+            "id": "vsc:SPPT_VSC_2:terminal:2",
+            "owner": "vsc:SPPT_VSC_2",
+            "node": "DC:SPPT_DC_BUS_2",
+            "domain": "DC"
+          }
+        ]
+      ],
+      "normalization_provenance_sha256": "bd21d16cebf1848eb2c46991fbfaf4b08e755f5e76ab63bf6540e64017d46ba0"
+    },
+    "ieee123_cim": {
+      "representation": "CIM RDF/XML",
+      "native_file": "positive_sequence.xml",
+      "hybrid_file": "hybrid_sppt.xml",
+      "native_sha256": "132f33569a4c78d31ab3ead3e6125ea4c48713e1970781b323bed0e0ca373bcc",
+      "snapshot_sha256": "12ed72658921cf043705b1271f96c065ec1de7563b9a2c6e3dfd79dbe33ff56d",
+      "rich_sha256": "6660000aa728381302493accaefbeef8c54c36c9c9a702dffbb05690162de33c",
+      "rich_AC_nodes": 130,
+      "counts": {
+        "AC_bus": 124,
+        "AC_branch": 126,
+        "DC_bus": 2,
+        "DC_branch": 1,
+        "VSC": 2
+      },
+      "total_active_load_mw": 3.49,
+      "source_AC_node": "urn:uuid:8A79AEE8-7C11-47E6-A5A2-F2CB4022D9FD",
+      "largest_load_AC_node": "urn:uuid:CE33CF4F-E232-49DE-A134-FCF235C69F78",
+      "dc_voltage_base_kv": 10.0,
+      "base_mva": 1.0,
+      "r_dc_pu": 0.02,
+      "r_dc_ohm": 2.0,
+      "efficiency": 0.99,
+      "Vdc_ref_pu": 1.02,
+      "P_PQ_mw": 0.05,
+      "expected_overlay_records": [
+        [
+          "dc_node",
+          {
+            "id": "DC:SPPT_DC_BUS_1",
+            "domain": "DC",
+            "vn_kv": 10.0
+          }
+        ],
+        [
+          "dc_node",
+          {
+            "id": "DC:SPPT_DC_BUS_2",
+            "domain": "DC",
+            "vn_kv": 10.0
+          }
+        ],
+        [
+          "dc_line",
+          {
+            "id": "dc_line:SPPT_DC_LINE",
+            "kind": "dc_line",
+            "engineering_id": "SPPT_DC_LINE",
+            "param_r_pu": 0.02,
+            "param_r_ohm": 2.0,
+            "param_base_mva": 1.0,
+            "param_base_kv": 10.0,
+            "param_in_service": true
+          }
+        ],
+        [
+          "terminal",
+          {
+            "id": "dc_line:SPPT_DC_LINE:terminal:1",
+            "owner": "dc_line:SPPT_DC_LINE",
+            "node": "DC:SPPT_DC_BUS_1",
+            "domain": "DC"
+          }
+        ],
+        [
+          "terminal",
+          {
+            "id": "dc_line:SPPT_DC_LINE:terminal:2",
+            "owner": "dc_line:SPPT_DC_LINE",
+            "node": "DC:SPPT_DC_BUS_2",
+            "domain": "DC"
+          }
+        ],
+        [
+          "vsc",
+          {
+            "id": "vsc:SPPT_VSC_1",
+            "kind": "vsc",
+            "engineering_id": "SPPT_VSC_1",
+            "param_eta": 0.99,
+            "param_in_service": true,
+            "param_base_mva": 1.0,
+            "ctrl_mode": "VDC_Q",
+            "ctrl_vdc_pu": 1.02,
+            "ctrl_q_ac_mvar": 0.0
+          }
+        ],
+        [
+          "terminal",
+          {
+            "id": "vsc:SPPT_VSC_1:terminal:1",
+            "owner": "vsc:SPPT_VSC_1",
+            "node": "urn:uuid:8A79AEE8-7C11-47E6-A5A2-F2CB4022D9FD",
+            "domain": "AC"
+          }
+        ],
+        [
+          "terminal",
+          {
+            "id": "vsc:SPPT_VSC_1:terminal:2",
+            "owner": "vsc:SPPT_VSC_1",
+            "node": "DC:SPPT_DC_BUS_1",
+            "domain": "DC"
+          }
+        ],
+        [
+          "vsc",
+          {
+            "id": "vsc:SPPT_VSC_2",
+            "kind": "vsc",
+            "engineering_id": "SPPT_VSC_2",
+            "param_eta": 0.99,
+            "param_in_service": true,
+            "param_base_mva": 1.0,
+            "ctrl_mode": "PQ",
+            "ctrl_p_ac_injection_mw": 0.05,
+            "ctrl_q_ac_mvar": 0.0
+          }
+        ],
+        [
+          "terminal",
+          {
+            "id": "vsc:SPPT_VSC_2:terminal:1",
+            "owner": "vsc:SPPT_VSC_2",
+            "node": "urn:uuid:CE33CF4F-E232-49DE-A134-FCF235C69F78",
+            "domain": "AC"
+          }
+        ],
+        [
+          "terminal",
+          {
+            "id": "vsc:SPPT_VSC_2:terminal:2",
+            "owner": "vsc:SPPT_VSC_2",
+            "node": "DC:SPPT_DC_BUS_2",
+            "domain": "DC"
+          }
+        ]
+      ],
+      "normalization_provenance_sha256": "ea411213232d29c748f97f0be6790b08463eafd6dd5c6fb07ae710547fd859d3"
+    },
+    "ieee8500_cim": {
+      "representation": "CIM RDF/XML",
+      "native_file": "positive_sequence.xml",
+      "hybrid_file": "hybrid_sppt.xml",
+      "native_sha256": "ed7f6cb85f5f3865a2bd1c03587c215f982ba7078b58dd0ec2c8f2eddc07f70d",
+      "snapshot_sha256": "89d693e001d188f4f29b4c2919941313ac5513e4eb83499f175271cd416ac6bf",
+      "rich_sha256": "c5b200ea534a5797ab99e4f59a0193a36558e10155006b3af228a7a0375bd74f",
+      "rich_AC_nodes": 4876,
+      "counts": {
+        "AC_bus": 4838,
+        "AC_branch": 4851,
+        "DC_bus": 2,
+        "DC_branch": 1,
+        "VSC": 2
+      },
+      "total_active_load_mw": 10.77317,
+      "source_AC_node": "urn:uuid:991B8337-D7FE-40E4-B520-9073A52BFCA6",
+      "largest_load_AC_node": "urn:uuid:C67D1D5C-960D-4705-9DB8-F5B236084B57",
+      "dc_voltage_base_kv": 10.0,
+      "base_mva": 1.0,
+      "r_dc_pu": 0.02,
+      "r_dc_ohm": 2.0,
+      "efficiency": 0.99,
+      "Vdc_ref_pu": 1.02,
+      "P_PQ_mw": 0.05,
+      "expected_overlay_records": [
+        [
+          "dc_node",
+          {
+            "id": "DC:SPPT_DC_BUS_1",
+            "domain": "DC",
+            "vn_kv": 10.0
+          }
+        ],
+        [
+          "dc_node",
+          {
+            "id": "DC:SPPT_DC_BUS_2",
+            "domain": "DC",
+            "vn_kv": 10.0
+          }
+        ],
+        [
+          "dc_line",
+          {
+            "id": "dc_line:SPPT_DC_LINE",
+            "kind": "dc_line",
+            "engineering_id": "SPPT_DC_LINE",
+            "param_r_pu": 0.02,
+            "param_r_ohm": 2.0,
+            "param_base_mva": 1.0,
+            "param_base_kv": 10.0,
+            "param_in_service": true
+          }
+        ],
+        [
+          "terminal",
+          {
+            "id": "dc_line:SPPT_DC_LINE:terminal:1",
+            "owner": "dc_line:SPPT_DC_LINE",
+            "node": "DC:SPPT_DC_BUS_1",
+            "domain": "DC"
+          }
+        ],
+        [
+          "terminal",
+          {
+            "id": "dc_line:SPPT_DC_LINE:terminal:2",
+            "owner": "dc_line:SPPT_DC_LINE",
+            "node": "DC:SPPT_DC_BUS_2",
+            "domain": "DC"
+          }
+        ],
+        [
+          "vsc",
+          {
+            "id": "vsc:SPPT_VSC_1",
+            "kind": "vsc",
+            "engineering_id": "SPPT_VSC_1",
+            "param_eta": 0.99,
+            "param_in_service": true,
+            "param_base_mva": 1.0,
+            "ctrl_mode": "VDC_Q",
+            "ctrl_vdc_pu": 1.02,
+            "ctrl_q_ac_mvar": 0.0
+          }
+        ],
+        [
+          "terminal",
+          {
+            "id": "vsc:SPPT_VSC_1:terminal:1",
+            "owner": "vsc:SPPT_VSC_1",
+            "node": "urn:uuid:991B8337-D7FE-40E4-B520-9073A52BFCA6",
+            "domain": "AC"
+          }
+        ],
+        [
+          "terminal",
+          {
+            "id": "vsc:SPPT_VSC_1:terminal:2",
+            "owner": "vsc:SPPT_VSC_1",
+            "node": "DC:SPPT_DC_BUS_1",
+            "domain": "DC"
+          }
+        ],
+        [
+          "vsc",
+          {
+            "id": "vsc:SPPT_VSC_2",
+            "kind": "vsc",
+            "engineering_id": "SPPT_VSC_2",
+            "param_eta": 0.99,
+            "param_in_service": true,
+            "param_base_mva": 1.0,
+            "ctrl_mode": "PQ",
+            "ctrl_p_ac_injection_mw": 0.05,
+            "ctrl_q_ac_mvar": 0.0
+          }
+        ],
+        [
+          "terminal",
+          {
+            "id": "vsc:SPPT_VSC_2:terminal:1",
+            "owner": "vsc:SPPT_VSC_2",
+            "node": "urn:uuid:C67D1D5C-960D-4705-9DB8-F5B236084B57",
+            "domain": "AC"
+          }
+        ],
+        [
+          "terminal",
+          {
+            "id": "vsc:SPPT_VSC_2:terminal:2",
+            "owner": "vsc:SPPT_VSC_2",
+            "node": "DC:SPPT_DC_BUS_2",
+            "domain": "DC"
+          }
+        ]
+      ],
+      "normalization_provenance_sha256": "7c4aeca794ba40a0e610a8d096e8d5e9d955044c0addd00d575164ab27c801df"
+    }
+  },
+  "files": {
+    "ieee123_cim/baseline_validation.json": {
+      "sha256": "f43fd694b0f5ed1013829af001761380e3bd64573a65cab900279c54552836e0",
+      "bytes": 2133
+    },
+    "ieee123_cim/dc_overlay.json": {
+      "sha256": "53d1ac5e907b3d9e121de74a2211ddefddd0d022e637f985b7f8e61dc50302cc",
+      "bytes": 2926
+    },
+    "ieee123_cim/H_src.json.gz": {
+      "sha256": "12ed72658921cf043705b1271f96c065ec1de7563b9a2c6e3dfd79dbe33ff56d",
+      "bytes": 1653782
+    },
+    "ieee123_cim/hybrid_sppt.xml": {
+      "sha256": "55fc3f7271b3182b0779a2e5e679812126d5ea2bf0c5849ea862658750b243cd",
+      "bytes": 902574
+    },
+    "ieee123_cim/normalization_provenance.json.gz": {
+      "sha256": "685d33124d5fbfd8b31d03251974a69429f4ce1aa67eb99940db92f724bd6a99",
+      "bytes": 19785
+    },
+    "ieee123_cim/normalization_validation.json": {
+      "sha256": "35d56cc168355acb9b9935fd74c2a7164e83ba51667e45997b18665cc0bbf6fd",
+      "bytes": 751
+    },
+    "ieee123_cim/positive_sequence.xml": {
+      "sha256": "132f33569a4c78d31ab3ead3e6125ea4c48713e1970781b323bed0e0ca373bcc",
+      "bytes": 896946
+    },
+    "ieee123_cim/rich_model.json.gz": {
+      "sha256": "6660000aa728381302493accaefbeef8c54c36c9c9a702dffbb05690162de33c",
+      "bytes": 254177
+    },
+    "ieee123_glm/baseline_validation.json": {
+      "sha256": "bd08d9ad6d17060fb24acadd68bf46fea7ed47e216074f030cee585be148b2f1",
+      "bytes": 2164
+    },
+    "ieee123_glm/dc_overlay.json": {
+      "sha256": "50ebecb8609e0f4d23de54e7716c00a5feb8c067c1dfc7550396bafed0d5d729",
+      "bytes": 2781
+    },
+    "ieee123_glm/H_src.json.gz": {
+      "sha256": "a5dbe3230b625766b683f9607c3aabded8744de45be12a458b55ed61de9c1cc3",
+      "bytes": 3745063
+    },
+    "ieee123_glm/hybrid_sppt.glm": {
+      "sha256": "84ae0eb71fcc3a99a4580c789e603aa768c5ee9537710b0cd1af732e407471cb",
+      "bytes": 964035
+    },
+    "ieee123_glm/normalization_provenance.json.gz": {
+      "sha256": "d0509cbf7a9ad8e0ac7d2d1d951e702b2456d3b6f2473e0dd7f2d5ba2d8a05b3",
+      "bytes": 66898
+    },
+    "ieee123_glm/normalization_validation.json": {
+      "sha256": "67bc4f8fac5d00c238cff9864fb7fb1045565e69c3addd1580904ac7800e9dcc",
+      "bytes": 751
+    },
+    "ieee123_glm/positive_sequence.glm": {
+      "sha256": "3041f5ea2c5920426e9006b599ae14cc6516ff9132c21a6dc61daf10fb001f44",
+      "bytes": 961937
+    },
+    "ieee123_glm/rich_model.json.gz": {
+      "sha256": "bb3da97662cddbd7f7b627ceed91e4cd6c7fc3e1426a1143347022394ec30c79",
+      "bytes": 1406489
+    },
+    "ieee8500_cim/baseline_validation.json": {
+      "sha256": "bab1a3a33362a5d4beaaceb871f73404966bbe3cc51e9cf07678e7b5063d3f15",
+      "bytes": 2122
+    },
+    "ieee8500_cim/dc_overlay.json": {
+      "sha256": "4ecb50361f93167efc8a8d5fa56f44fb5dbe57738542b9e28e4a59eda9ed4b19",
+      "bytes": 2931
+    },
+    "ieee8500_cim/H_src.json.gz": {
+      "sha256": "89d693e001d188f4f29b4c2919941313ac5513e4eb83499f175271cd416ac6bf",
+      "bytes": 59590378
+    },
+    "ieee8500_cim/hybrid_sppt.xml": {
+      "sha256": "754620f2dac8aabec2d013f898050feb8050b8834e0e7fbb3452d03dc5a57130",
+      "bytes": 33589059
+    },
+    "ieee8500_cim/normalization_provenance.json.gz": {
+      "sha256": "507ecbd5a0dd0d1f1f6334fde499a8a9f54262e83a0cbe91760abd21ace33eeb",
+      "bytes": 533118
+    },
+    "ieee8500_cim/normalization_validation.json": {
+      "sha256": "1c116d5567158a605e92e86b4582eabaf302a93e55e1378f0170a57256242b99",
+      "bytes": 752
+    },
+    "ieee8500_cim/positive_sequence.xml": {
+      "sha256": "ed7f6cb85f5f3865a2bd1c03587c215f982ba7078b58dd0ec2c8f2eddc07f70d",
+      "bytes": 33583431
+    },
+    "ieee8500_cim/rich_model.json.gz": {
+      "sha256": "c5b200ea534a5797ab99e4f59a0193a36558e10155006b3af228a7a0375bd74f",
+      "bytes": 9342654
+    },
+    "ieee8500_glm/baseline_validation.json": {
+      "sha256": "9c01e1019cb88aa14bdbc3199ceec7d04cd40c165cdbef1e9b946d7a04f0d9ef",
+      "bytes": 5148
+    },
+    "ieee8500_glm/dc_overlay.json": {
+      "sha256": "6fea1277cbb4dd8f5b24929ee470179a615d3557a21501cfc20e21446cbaf05d",
+      "bytes": 2772
+    },
+    "ieee8500_glm/H_src.json.gz": {
+      "sha256": "706ea023b2f43c51dffbf39ae1115c23288bdbd537b961099d2da754897da801",
+      "bytes": 12179343
+    },
+    "ieee8500_glm/hybrid_sppt.glm": {
+      "sha256": "3be45a78b976f2d0a380804c6fb078f198f1f04a0f47108ed9a97256fc8f04cb",
+      "bytes": 2724215
+    },
+    "ieee8500_glm/normalization_provenance.json.gz": {
+      "sha256": "bc2eb0a68adc16a4becb57fd66dcfcf66f7601454ddb051d342495c8491d0899",
+      "bytes": 217826
+    },
+    "ieee8500_glm/normalization_validation.json": {
+      "sha256": "179a5a3916d5bdb4b4f0e6c41729d0908a05334b8a9bc1acffbc78c9016c43bb",
+      "bytes": 769
+    },
+    "ieee8500_glm/positive_sequence.glm": {
+      "sha256": "4f44f2c53c0d23f37ef8cb80ca39eb44d6b20f0fffa9a1b8514141e4f8119b07",
+      "bytes": 2722131
+    },
+    "ieee8500_glm/rich_model.json.gz": {
+      "sha256": "da9d5d1dcb81511f4376a0f48de97f2350999ced98e37eb4b222fe394ca1f621",
+      "bytes": 3950896
+    },
+    "README.md": {
+      "sha256": "a541fb8b71641b991ba3cfb8f5f0c8d4c5da45f34fc69fe48207a50bd0170892",
+      "bytes": 6888
+    },
+    "UPSTREAM_NOTICE.md": {
+      "sha256": "0669ddb693bf6eb5d5e03fbe96754d6599b50e3997156a6e4affc030a13d650c",
+      "bytes": 3829
+    },
+    "verify_dataset.py": {
+      "sha256": "7eee0ccc70a3edaea5632dca628d9871a7bb0ab022f83ae8ce5aeb5a9d4cf358",
+      "bytes": 4952
+    }
+  }
+}

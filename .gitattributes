@@ -1,0 +1,4 @@
+# Preserve exact dataset bytes and published SHA-256 hashes on all platforms.
+SPPT_Dataset/** -text whitespace=cr-at-eol
+# Upstream notice is copied verbatim, including its existing trailing spaces.
+SPPT_Dataset/UPSTREAM_NOTICE.md whitespace=-blank-at-eol,-blank-at-eof,cr-at-eol

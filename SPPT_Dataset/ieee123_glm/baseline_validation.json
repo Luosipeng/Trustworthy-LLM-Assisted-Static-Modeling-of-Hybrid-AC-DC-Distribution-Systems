@@ -1,0 +1,69 @@
+{
+  "evidence_kind": "Saved baseline assessment; no new solver execution",
+  "gates": {
+    "G_MI": true,
+    "A_PP": true,
+    "G_CR": true,
+    "A_NV": true,
+    "G_DA": true,
+    "A_PA": true
+  },
+  "Admit_SPPT": true,
+  "counts": {
+    "AC_bus": 1499,
+    "AC_branch": 1498,
+    "DC_bus": 2,
+    "DC_branch": 1,
+    "VSC": 2
+  },
+  "numerical": {
+    "bus_count": 1499,
+    "branch_count": 1498,
+    "island_count": 1,
+    "reference_count": 1,
+    "total_p_mw": 3.891064828453805,
+    "total_q_mvar": 0.0,
+    "line_r_ohm": [
+      0.005796821512626,
+      0.528668757818182
+    ],
+    "line_x_ohm": [
+      0.0032196969696970004,
+      0.5359473000000001
+    ],
+    "transformer_ratio_range": [
+      0.96,
+      17.320508075688767
+    ],
+    "tap_range": null,
+    "nonfinite_parameters": [],
+    "line_voltage_base_mismatches": [],
+    "winding_to_bus_voltage_base_ratio_range": [
+      0.9992505620784412,
+      1.0416666666666667
+    ],
+    "structural_control_failures": [],
+    "nonpositive_voltage_bases": [],
+    "initial_residual": 34.43951379623104,
+    "final_residual": 1.0225364670670232e-09,
+    "iteration_count": 4,
+    "jacobian_conditioning_indicator": 4050.10521653829,
+    "jacobian_conditioning_status": "absolute diagonal spread of last Jacobian; diagnostic only, not a matrix condition-number estimate",
+    "continuation_path": [],
+    "first_failed_continuation_step": null,
+    "initial_convergence": true,
+    "continuation_success": false,
+    "final_convergence": true,
+    "executed": true,
+    "numerically_valid": true,
+    "target_hash_before": "35974d85a8d571c0c21902d1163939a205e07d685d8e2050714a502c10aa598a",
+    "target_hash_after": "35974d85a8d571c0c21902d1163939a205e07d685d8e2050714a502c10aa598a",
+    "dc_residual": 6.890321646579878e-15,
+    "error": null,
+    "solver_residual_pu": 1.0228850181997745e-09,
+    "independent_DC_nodal_residual_pu": 7.029099524658022e-15,
+    "converter_balance_MW": 0.0,
+    "nonnegative_converter_losses": true
+  },
+  "original_result_sha256": "947b72608cd689f8bf83a512759896ce29575485d66db770f6ebc2819271a5bf"
+}

@@ -1,0 +1,87 @@
+{
+  "source_snapshot_hash": "a5dbe3230b625766b683f9607c3aabded8744de45be12a458b55ed61de9c1cc3",
+  "S_base": 1.0,
+  "total_active_load_mw": 3.84,
+  "source_bus": "node_150",
+  "source_device": "node_150",
+  "largest_load_bus": "house_agg_0_A_10_node_11_102",
+  "largest_load_mw": 0.003,
+  "P_PQ_mw": 0.05,
+  "Q_convention": "both AC injection Q setpoints zero Mvar, reused unchanged",
+  "Vdc_ref": 1.02,
+  "eta": 0.99,
+  "r_dc": 0.02,
+  "dc_base_kv": 10.0,
+  "dc_bus_ids": [
+    "DC:SPPT_DC_BUS_1",
+    "DC:SPPT_DC_BUS_2"
+  ],
+  "dc_line_id": "dc_line:SPPT_DC_LINE",
+  "vsc_ids": [
+    "vsc:SPPT_VSC_1",
+    "vsc:SPPT_VSC_2"
+  ],
+  "converter_roles": {
+    "vsc:SPPT_VSC_1": {
+      "mode": "VDC_Q",
+      "vdc_pu": 1.02,
+      "q_ac_mvar": 0.0
+    },
+    "vsc:SPPT_VSC_2": {
+      "mode": "PQ",
+      "p_ac_injection_mw": 0.05,
+      "q_ac_mvar": 0.0
+    }
+  },
+  "terminal_associations": {
+    "dc_line:SPPT_DC_LINE:terminal:1": {
+      "owner": "dc_line:SPPT_DC_LINE",
+      "node": "DC:SPPT_DC_BUS_1",
+      "domain": "DC"
+    },
+    "dc_line:SPPT_DC_LINE:terminal:2": {
+      "owner": "dc_line:SPPT_DC_LINE",
+      "node": "DC:SPPT_DC_BUS_2",
+      "domain": "DC"
+    },
+    "vsc:SPPT_VSC_1:terminal:1": {
+      "owner": "vsc:SPPT_VSC_1",
+      "node": "node_150",
+      "domain": "AC"
+    },
+    "vsc:SPPT_VSC_1:terminal:2": {
+      "owner": "vsc:SPPT_VSC_1",
+      "node": "DC:SPPT_DC_BUS_1",
+      "domain": "DC"
+    },
+    "vsc:SPPT_VSC_2:terminal:1": {
+      "owner": "vsc:SPPT_VSC_2",
+      "node": "house_agg_0_A_10_node_11_102",
+      "domain": "AC"
+    },
+    "vsc:SPPT_VSC_2:terminal:2": {
+      "owner": "vsc:SPPT_VSC_2",
+      "node": "DC:SPPT_DC_BUS_2",
+      "domain": "DC"
+    }
+  },
+  "engineering_provenance": {
+    "kind": "deterministic_declared_overlay",
+    "recipe_hash": "10e817e9654d104eea941ad2d3fb2ac1de3b4a333cbd3b5917368e19b293ba43",
+    "source_snapshot_hash": "a5dbe3230b625766b683f9607c3aabded8744de45be12a458b55ed61de9c1cc3"
+  },
+  "augmentation_code_hash": "c8cb4b6ec094278ebeb0a98423f5f515fce75e0bb5da21a815765b68c1884771",
+  "recipe": {
+    "version": "existing_two_terminal_overlay_rich_v1",
+    "S_base_mva": 1.0,
+    "dc_base_kv": 10.0,
+    "r_dc_pu": 0.02,
+    "eta": 0.99,
+    "Vdc_ref_pu": 1.02,
+    "q_ac_mvar": 0.0,
+    "Q_provenance": "sppt_common_semantic_end_to_end.augment; frozen hash 5048b57c6337f3edec1ffadd9baad683e8e92dbed791e1eb6cff521d8967e51c",
+    "DC_base_provenance": "output/simbench_sppt_hybrid/1-MVLV-comm-all-0-sw/overlay_reference.json: DCNode.voltage_base_kv=10",
+    "power_rule": "min(max(0.02*sum(active loads),0.001*S_base),0.05*S_base)",
+    "sign": "AC and DC powers positive when injected into respective networks"
+  }
+}

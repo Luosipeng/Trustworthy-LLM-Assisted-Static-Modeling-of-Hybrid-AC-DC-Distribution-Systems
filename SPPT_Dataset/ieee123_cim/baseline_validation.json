@@ -1,0 +1,69 @@
+{
+  "evidence_kind": "Saved baseline assessment; no new solver execution",
+  "gates": {
+    "G_MI": true,
+    "A_PP": true,
+    "G_CR": true,
+    "A_NV": true,
+    "G_DA": true,
+    "A_PA": true
+  },
+  "Admit_SPPT": true,
+  "counts": {
+    "AC_bus": 124,
+    "AC_branch": 126,
+    "DC_bus": 2,
+    "DC_branch": 1,
+    "VSC": 2
+  },
+  "numerical": {
+    "bus_count": 124,
+    "branch_count": 126,
+    "island_count": 1,
+    "reference_count": 1,
+    "total_p_mw": 3.5410648284538055,
+    "total_q_mvar": 1.92,
+    "line_r_ohm": [
+      0.00579671725592,
+      0.5286590917272
+    ],
+    "line_x_ohm": [
+      0.011875631316,
+      0.5359374990144
+    ],
+    "transformer_ratio_range": [
+      1.0,
+      8.666666666666668
+    ],
+    "tap_range": null,
+    "nonfinite_parameters": [],
+    "line_voltage_base_mismatches": [],
+    "winding_to_bus_voltage_base_ratio_range": [
+      1.0,
+      1.000092798024145
+    ],
+    "structural_control_failures": [],
+    "nonpositive_voltage_bases": [],
+    "initial_residual": 0.5900000002048001,
+    "final_residual": 1.2306308317004873e-08,
+    "iteration_count": 3,
+    "jacobian_conditioning_indicator": 89820.40767046167,
+    "jacobian_conditioning_status": "absolute diagonal spread of last Jacobian; diagnostic only, not a matrix condition-number estimate",
+    "continuation_path": [],
+    "first_failed_continuation_step": null,
+    "initial_convergence": true,
+    "continuation_success": false,
+    "final_convergence": true,
+    "executed": true,
+    "numerically_valid": true,
+    "target_hash_before": "672588664f1022250ba4b807b112d3d056fadee1aadc8eb7952d14a556d5e2c4",
+    "target_hash_after": "672588664f1022250ba4b807b112d3d056fadee1aadc8eb7952d14a556d5e2c4",
+    "dc_residual": 6.890321646579878e-15,
+    "error": null,
+    "solver_residual_pu": 1.2306362224325606e-08,
+    "independent_DC_nodal_residual_pu": 7.029099524658022e-15,
+    "converter_balance_MW": 0.0,
+    "nonnegative_converter_losses": true
+  },
+  "original_result_sha256": "73b28dbf2807bb0ee5b6fef3887a4c4b86524875642748b3f75191ac45982439"
+}

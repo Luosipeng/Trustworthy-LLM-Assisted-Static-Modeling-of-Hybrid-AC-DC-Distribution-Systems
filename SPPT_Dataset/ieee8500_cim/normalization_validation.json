@@ -1,0 +1,20 @@
+{
+  "converged": true,
+  "all_buses_finite": true,
+  "ac_residual_pu": 1.2893821732858672e-08,
+  "power_balance_mw": -4.139066867026031e-10,
+  "max_errors": {
+    "bus.vm_pu": 3.902322909254963e-12,
+    "bus.va_degree": 1.1580958414469933e-10,
+    "load.p_mw": 0.0,
+    "load.q_mvar": 0.0,
+    "line.pl_mw": 4.654054919228656e-13,
+    "trafo.pl_mw": 5.204725539442734e-13
+  },
+  "buses": 4876,
+  "loads": 1177,
+  "source_sha256": "cf5e46891ab73e3e767c17b2c89de09a8a2b53b61fc735e60b4a588e348d7baa",
+  "native_sha256": "ed7f6cb85f5f3865a2bd1c03587c215f982ba7078b58dd0ec2c8f2eddc07f70d",
+  "deterministic_replay": true,
+  "scope": "frozen balanced positive-sequence native organization; external simulator compatibility not certified"
+}

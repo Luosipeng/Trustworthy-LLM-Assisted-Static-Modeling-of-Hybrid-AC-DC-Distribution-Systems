@@ -1,0 +1,69 @@
+{
+  "evidence_kind": "Saved baseline assessment; no new solver execution",
+  "gates": {
+    "G_MI": true,
+    "A_PP": true,
+    "G_CR": true,
+    "A_NV": true,
+    "G_DA": true,
+    "A_PA": true
+  },
+  "Admit_SPPT": true,
+  "counts": {
+    "AC_bus": 4838,
+    "AC_branch": 4851,
+    "DC_bus": 2,
+    "DC_branch": 1,
+    "VSC": 2
+  },
+  "numerical": {
+    "bus_count": 4838,
+    "branch_count": 4851,
+    "island_count": 1,
+    "reference_count": 1,
+    "total_p_mw": 10.824234828453806,
+    "total_q_mvar": 2.7000109225299997,
+    "line_r_ohm": [
+      0.0,
+      4.8688765745724
+    ],
+    "line_x_ohm": [
+      1e-05,
+      14.798307
+    ],
+    "transformer_ratio_range": [
+      1.0,
+      59.95560487738422
+    ],
+    "tap_range": null,
+    "nonfinite_parameters": [],
+    "line_voltage_base_mismatches": [],
+    "winding_to_bus_voltage_base_ratio_range": [
+      1.0,
+      1.0000614125497929
+    ],
+    "structural_control_failures": [],
+    "nonpositive_voltage_bases": [],
+    "initial_residual": 44.684165560290126,
+    "final_residual": 5.5734194579307705e-09,
+    "iteration_count": 4,
+    "jacobian_conditioning_indicator": 48963722.81813627,
+    "jacobian_conditioning_status": "absolute diagonal spread of last Jacobian; diagnostic only, not a matrix condition-number estimate",
+    "continuation_path": [],
+    "first_failed_continuation_step": null,
+    "initial_convergence": true,
+    "continuation_success": false,
+    "final_convergence": true,
+    "executed": true,
+    "numerically_valid": true,
+    "target_hash_before": "6ba453fdc58a49fbb648b335220e620d14d0d23ecf4962492e1e21c3c3e0892d",
+    "target_hash_after": "6ba453fdc58a49fbb648b335220e620d14d0d23ecf4962492e1e21c3c3e0892d",
+    "dc_residual": 6.890321646579878e-15,
+    "error": null,
+    "solver_residual_pu": 7.99032691512623e-09,
+    "independent_DC_nodal_residual_pu": 7.029099524658022e-15,
+    "converter_balance_MW": 0.0,
+    "nonnegative_converter_losses": true
+  },
+  "original_result_sha256": "4199c1a1afa6ecca6394b0279a53c10d355a5bf386e74e778555377d84d00f44"
+}

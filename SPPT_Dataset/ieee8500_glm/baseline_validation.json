@@ -1,0 +1,196 @@
+{
+  "evidence_kind": "Saved baseline assessment; no new solver execution",
+  "gates": {
+    "G_MI": true,
+    "A_PP": true,
+    "G_CR": true,
+    "A_NV": true,
+    "G_DA": true,
+    "A_PA": true
+  },
+  "Admit_SPPT": true,
+  "counts": {
+    "AC_bus": 4837,
+    "AC_branch": 4836,
+    "DC_bus": 2,
+    "DC_branch": 1,
+    "VSC": 2
+  },
+  "numerical": {
+    "bus_count": 4837,
+    "branch_count": 4836,
+    "island_count": 1,
+    "reference_count": 1,
+    "total_p_mw": 10.824234828453806,
+    "total_q_mvar": 2.7000095999999996,
+    "line_r_ohm": [
+      4.872402649300001e-05,
+      4.95355670625846
+    ],
+    "line_x_ohm": [
+      0.00011230831657600002,
+      2.706858097263447
+    ],
+    "transformer_ratio_range": [
+      0.9430255402750493,
+      51.96152422706632
+    ],
+    "tap_range": null,
+    "nonfinite_parameters": [],
+    "line_voltage_base_mismatches": [],
+    "winding_to_bus_voltage_base_ratio_range": [
+      0.9551628633445587,
+      1.0604166666666666
+    ],
+    "structural_control_failures": [],
+    "nonpositive_voltage_bases": [],
+    "initial_residual": 440.78058528771635,
+    "final_residual": 1.367575780002106e-08,
+    "iteration_count": 0,
+    "jacobian_conditioning_indicator": null,
+    "jacobian_conditioning_status": "not computed",
+    "continuation_path": [
+      {
+        "lambda_value": 0.0,
+        "converged": true,
+        "residual": 9.689740359010251e-11,
+        "error": null
+      },
+      {
+        "lambda_value": 0.05,
+        "converged": true,
+        "residual": 2.0359758835879708e-08,
+        "error": null
+      },
+      {
+        "lambda_value": 0.1,
+        "converged": true,
+        "residual": 1.9756778989817395e-08,
+        "error": null
+      },
+      {
+        "lambda_value": 0.15,
+        "converged": true,
+        "residual": 1.9194793643389426e-08,
+        "error": null
+      },
+      {
+        "lambda_value": 0.2,
+        "converged": true,
+        "residual": 1.8677023641898008e-08,
+        "error": null
+      },
+      {
+        "lambda_value": 0.25,
+        "converged": true,
+        "residual": 1.819908464265971e-08,
+        "error": null
+      },
+      {
+        "lambda_value": 0.3,
+        "converged": true,
+        "residual": 1.7738171382356378e-08,
+        "error": null
+      },
+      {
+        "lambda_value": 0.35,
+        "converged": true,
+        "residual": 1.731649570242815e-08,
+        "error": null
+      },
+      {
+        "lambda_value": 0.4,
+        "converged": true,
+        "residual": 1.6920032802129182e-08,
+        "error": null
+      },
+      {
+        "lambda_value": 0.45,
+        "converged": true,
+        "residual": 1.655124669908212e-08,
+        "error": null
+      },
+      {
+        "lambda_value": 0.5,
+        "converged": true,
+        "residual": 1.621267565332636e-08,
+        "error": null
+      },
+      {
+        "lambda_value": 0.55,
+        "converged": true,
+        "residual": 1.587804658638737e-08,
+        "error": null
+      },
+      {
+        "lambda_value": 0.6,
+        "converged": true,
+        "residual": 1.556985525457869e-08,
+        "error": null
+      },
+      {
+        "lambda_value": 0.65,
+        "converged": true,
+        "residual": 1.527634862598499e-08,
+        "error": null
+      },
+      {
+        "lambda_value": 0.7,
+        "converged": true,
+        "residual": 1.5023874183965937e-08,
+        "error": null
+      },
+      {
+        "lambda_value": 0.75,
+        "converged": true,
+        "residual": 1.475939788750922e-08,
+        "error": null
+      },
+      {
+        "lambda_value": 0.8,
+        "converged": true,
+        "residual": 1.4516846470889326e-08,
+        "error": null
+      },
+      {
+        "lambda_value": 0.85,
+        "converged": true,
+        "residual": 1.4291246451658272e-08,
+        "error": null
+      },
+      {
+        "lambda_value": 0.9,
+        "converged": true,
+        "residual": 1.4074758489048553e-08,
+        "error": null
+      },
+      {
+        "lambda_value": 0.95,
+        "converged": true,
+        "residual": 1.387339498206897e-08,
+        "error": null
+      },
+      {
+        "lambda_value": 1.0,
+        "converged": true,
+        "residual": 1.3671973298038584e-08,
+        "error": null
+      }
+    ],
+    "first_failed_continuation_step": null,
+    "initial_convergence": false,
+    "continuation_success": true,
+    "final_convergence": true,
+    "executed": true,
+    "numerically_valid": true,
+    "target_hash_before": "b93df839ce1298eb3aa0eedc483e05a57a6e1488cd152a0fd431cc3852ce167c",
+    "target_hash_after": "b93df839ce1298eb3aa0eedc483e05a57a6e1488cd152a0fd431cc3852ce167c",
+    "dc_residual": 6.890321646579878e-15,
+    "error": null,
+    "solver_residual_pu": 1.3677572728156094e-08,
+    "independent_DC_nodal_residual_pu": 7.029099524658022e-15,
+    "converter_balance_MW": 0.0,
+    "nonnegative_converter_losses": true
+  },
+  "original_result_sha256": "c52c8981750ff9a9fb346237703c71c6e09d6bcfefb0d78007f628ee076ba0e6"
+}
